@@ -35,8 +35,8 @@ $app-direction: ltr;
 
 $colors: (
   primary:    #488aff,
-  secondary:  #3D5AFE,
-  danger:     #FF9100,
+  secondary:  #32db64,
+  danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222
 );
@@ -86,17 +86,3 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
-
-@font-face {
-    font-family: 'thaisanslite';
-    src: url('../assets/css/thaisanslite_r1-webfont.woff2') format('woff2'),
-         url('../assets/css/thaisanslite_r1-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-* {
-  font-family: 'thaisanslite', sans-serif;
-  font-size: 2rem;
-}

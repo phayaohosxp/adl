@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams,LoadingController } from 'ionic-angular';
 import { Subscription } from 'rxjs/Subscription';
 import { Chart } from 'angular-highcharts';
 import { ChartProvider } from "../../providers/chart/chart";
@@ -9,10 +9,10 @@ import { Adl } from "../../models/adl";
  
 @Component({
 
-  selector: 'page-about',
-  templateUrl: 'about.html',
+  selector: 'page-chart',
+  templateUrl: 'chart.html',
 })
-export class AboutPage {
+export class ChartPage {
   g: Adl[];
   sub: Subscription;
   chart: any;
@@ -21,10 +21,13 @@ export class AboutPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private chartprovider: ChartProvider,
+    private loadingCtrl: LoadingController
 
   ) {
-    this.username = localStorage.getItem('username');
-    this.id = this.username;
+     let loading = this.loadingCtrl.create({
+      content: 'กำลังโหลดข้อมูล...',
+    });
+    loading.present();
     this.chartprovider.getChartdata()
       .then((data: any) => {
         let g = data;
@@ -65,6 +68,7 @@ export class AboutPage {
           series: [_dataA]
         });
       });
+    loading.dismiss();
   }
 }
 
