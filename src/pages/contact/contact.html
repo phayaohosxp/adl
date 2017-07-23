@@ -1,20 +1,22 @@
+
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>
-      Toots
-    </ion-title>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>กราฟ</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>เครื่องมือพัฒนา</ion-list-header>
-    <ion-item>
+<ion-content class="tutorial-page">
 
-      - ionic framework 3 <br>
-      - AngularJs 4 <br>
-      - Yii2 Framework2 <br>
-
-    </ion-item>
-  </ion-list>
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slides">
+      <ion-toolbar>
+       </ion-toolbar>
+      <img [src]="slide.image" class="slide-image"/>
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <b [innerHTML]="slide.description"></b>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

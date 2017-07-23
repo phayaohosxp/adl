@@ -70,6 +70,8 @@ export class ChartPage {
       });
     loading.dismiss();
   }
+
+  
 }
 
 

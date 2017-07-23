@@ -1,0 +1,21 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> อำเภอ {{ampurname}}  </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="tutorial-page">
+  <ion-list>
+
+    <ion-item *ngFor="let item of items">
+   <p>   {{item.hosname}} <br> จำนวน {{item.cases}} ราย </p>
+    </ion-item>
+  </ion-list>
+  
+
+</ion-content>

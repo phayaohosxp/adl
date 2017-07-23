@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AdlProvider } from '../providers/adl/adl';
 import { ChartProvider } from '../providers/chart/chart';
 import { ChartModule } from 'angular-highcharts';
+import { AdldetailPage } from "../pages/adldetail/adldetail";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ChartModule } from 'angular-highcharts';
     ChartPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    AdldetailPage
   ],
   imports: [
     BrowserModule,HttpModule, ChartModule,
@@ -32,7 +34,8 @@ import { ChartModule } from 'angular-highcharts';
     ChartPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    AdldetailPage
   ],
   providers: [
     StatusBar,

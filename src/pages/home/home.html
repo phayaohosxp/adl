@@ -3,21 +3,24 @@
     <button ion-button icon-only menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title> ADL Report LAMPANG</ion-title>
+    <ion-title> รายงาน ADL</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="tutorial-page">
   <ion-list>
-    <ion-list-header>
-      รายงาน ADL จังหวัดลำปาง
-    </ion-list-header>
-    <ion-item *ngFor="let c of adl_data" (click)="itemSelected(c)">
-      อำเภอ{{c.ampurname}} : จำนวน {{c.cases}}  ราย
+
+    <ion-item *ngFor="let item of adl_data" (click)="itemSelected(item)">
+   <p>   อำเภอ{{item.ampurname}} : จำนวน {{item.cases}} ราย </p>
     </ion-item>
   </ion-list>
-</ion-content> 
 
+  <hr>
 
+  <ion-card >
+    <ion-card-content >
+      <div [chart]="chart"></div>
+    </ion-card-content>
+  </ion-card>
 
- 
+</ion-content>

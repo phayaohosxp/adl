@@ -5,4 +5,11 @@ export class Adl {
         public cases
     )
     { }
-} 
+}
+
+export interface Adl_detail {
+  hospcode?: string;
+  hosname?: string;
+  cases?: string;
+
+}
