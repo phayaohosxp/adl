@@ -8,19 +8,19 @@ import { NavController } from 'ionic-angular';
 export class ContactPage {
 slides = [
     {
-      title: "Slide1",
-      description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
-      image: "https://static.pexels.com/photos/512861/pexels-photo-512861.jpeg",
+      title: "Ionic Framework3",
+      description: "",
+      image: "../../assets/icon/ionic.png",
     },
     {
-      title: "Slide2",
-      description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
-      image: "https://static.pexels.com/photos/394887/pexels-photo-394887.jpeg",
+      title: "AngulurJS 4",
+      description: "",
+      image: "../../assets/icon/angular.png",
     },
     {
-      title: "Slide3",
-      description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-      image: "https://static.pexels.com/photos/518242/pexels-photo-518242.jpeg",
+      title: "Yii2 Framework2 RestFull-API",
+      description: "",
+      image: "../../assets/icon/yii2.jpg",
     }
   ];
   constructor(public navCtrl: NavController) {
